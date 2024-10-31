@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "doomchad",
+  theme = "doomchad",
   transparency = true,
   theme_toggle = {"doomchad", "one_light"},
   hl_override = require "configs.highlights".override,
