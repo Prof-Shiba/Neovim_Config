@@ -6,7 +6,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
-map("n", "<C-t>", function()
+map("n", "<C-t>", function() -- CTRL + t for a nicer looking theme switcher
   require("nvchad.themes").open {border = true}
 end, {})
 
