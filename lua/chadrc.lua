@@ -6,14 +6,10 @@
 local M = {}
 
 M.base46 = {
-  theme = "doomchad",
+  theme = "catppuccin",
   transparency = true,
-  theme_toggle = {"doomchad", "one_light"},
+  theme_toggle = {"catppuccin", "one_light"},
   hl_override = require "configs.highlights".override,
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
 }
 
 M.ui = {
@@ -56,8 +52,5 @@ M.colorify = {
   highlight = { hex = true, lspvars = true},
   virt_text = "▆",
 }
-
-
--- vim.cmd([[autocmd VimEnter * Nvdash]])
 
 return M
