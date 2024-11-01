@@ -11,12 +11,16 @@ map("n", "<C-t>", function() -- CTRL + t for a nicer looking theme switcher
 end, {})
 
 -- C++ below
--- F5 to compile the current C++ file
-map("n", "<F5>", ":!g++ % -o %:r && echo 'Compiled successfully!'<CR>", { noremap = true, silent = true })
+-- F5 to compile all C++ files in the current directory
+map("n", "<F5>", ":!g++ *.cpp -o program && echo 'Compiled successfully!'<CR>", { noremap = true, silent = true })
+
 -- F6 to run the compiled program
-map("n", "<F6>", ":!./%:r<CR>", { noremap = true, silent = true })
--- F7 to compile and run the program
-map("n", "<F7>", ":!g++ % -o %:r && ./%:r<CR>", { noremap = true, silent = true })
--- F8 to compile with debug symbols and run the program
-map("n", "<F8>", ":!g++ -g -O0 % -o %:r && ./%:r<CR>", { noremap = true, silent = true })
+map("n", "<F6>", ":!./program<CR>", { noremap = true, silent = true })
+
+-- F7 to compile and run all C++ files
+map("n", "<F7>", ":!g++ *.cpp -o program && ./program<CR>", { noremap = true, silent = true })
+
+-- F8 to compile with debug symbols and run
+map("n", "<F8>", ":!g++ -g -O0 *.cpp -o program && ./program<CR>", { noremap = true, silent = true })
+
 -- End of C++
