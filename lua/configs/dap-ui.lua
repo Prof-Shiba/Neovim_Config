@@ -8,7 +8,7 @@ map(
     "n",
     "<leader>du",
     "<cmd>lua require('dapui').toggle()<CR>",
-    { desc = "Toggle DAP UI" }
+    { desc = "Toggle DAP (debugger) UI" }
 )
 
 dap.listeners.after.attach.dapui_config = function()

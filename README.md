@@ -1,6 +1,9 @@
-# Neovim configuration
-My Neovim configuration for Web Purposes, Python, and C/C++.
+**This repo is supposed to used as config by NvChad users!**
 
-Includes LSPs, formatters, working DAP for Python and C/C++, a live server plugin for Web Dev, and some style-related features using the new NvChad configuration changes
+- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
+- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
+- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
 
-Uploading as a backup.
+# Credits
+
+1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!

@@ -14,6 +14,13 @@ return {
   },
 
   {
+    "folke/todo-comments.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    event = "BufRead",
+    config = true,
+  },
+
+  {
    "nvim-tree/nvim-tree.lua",
       opts = {
         view = {
@@ -21,8 +28,34 @@ return {
           width = 30,
         },
       }
-   },
+  },
 
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-ts-autotag").setup({
+        enable_close = true,
+        enable_rename = true,
+        enable_close_on_slash = false,
+      })
+    end,
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+
+  {
+    "mattn/emmet-vim",
+    ft = {"html", "css", "javascript"},
+    config = function()
+    end
+  },
 
   {
     "mfussenegger/nvim-dap",
@@ -71,9 +104,10 @@ return {
   	"nvim-treesitter/nvim-treesitter",
   	opts = {
   		ensure_installed = {
-  			"vim", "lua", "vimdoc",
+  		 "vim", "lua", "vimdoc",
        "html", "css", "python",
-       "c", "cpp",
+       "c", "cpp", "javascript",
+       "tsx", "vue",
   		},
   	},
   },
