@@ -20,6 +20,6 @@ map("n", "<F6>", ":!./program<CR>", { noremap = true, silent = true })
 -- F7 to compile and run all C++ files
 map("n", "<F7>", ":!g++ *.cpp -o program && ./program<CR>", { noremap = true, silent = true })
 
--- F8 to compile with debug symbols and run
-map("n", "<F8>", ":!g++ -g -O0 *.cpp -o program && ./program<CR>", { noremap = true, silent = true })
+-- F8 to compile with debug symbols
+map("n", "<F8>", ":!g++ -g -O0 *.cpp -o program", { noremap = true, silent = true })
 -- End of C++
