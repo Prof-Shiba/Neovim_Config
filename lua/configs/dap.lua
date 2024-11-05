@@ -1,6 +1,10 @@
 local map = vim.keymap.set
 local dap = require('dap')
 
+local dapui = require("dapui")
+
+dapui.setup()
+
 map(
     "n",
     "<leader>db",
@@ -15,6 +19,15 @@ map(
     { desc = "Start or continue DAP" }
 )
 
+map(
+    "n",
+    "<leader>du",
+    function()
+        require("dapui").toggle()
+    end,
+    { desc = "Toggle DAP UI" }
+)
+
 
 dap.adapters.codelldb = {
   type = 'server',
@@ -24,6 +37,7 @@ dap.adapters.codelldb = {
     args = {"--port", "${port}"},
   }
 }
+
 
 
 dap.configurations.cpp = {
@@ -37,5 +51,7 @@ dap.configurations.cpp = {
     cwd = '${workspaceFolder}',
     stopOnEntry = false,
     args = {},
+    runInTerminal = false,
+    console = "integratedTerminal",
   },
 }
