@@ -106,7 +106,7 @@ return {
   		 "vim", "lua", "vimdoc",
        "html", "css", "python",
        "c", "cpp", "javascript",
-       "tsx", "vue",
+       "tsx", "vue", "codelldb",
   		},
   	},
   },
