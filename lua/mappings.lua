@@ -21,5 +21,5 @@ map("n", "<F6>", ":!./main<CR>", { noremap = true, silent = true })
 map("n", "<F7>", ":!g++ *.cpp -o main && ./main<CR>", { noremap = true, silent = true })
 
 -- F8 to compile with debug symbols
-map("n", "<F8>", ":!g++ -g -O0 *.cpp -o main", { noremap = true, silent = true })
+map("n", "<F8>", ":!g++ -g -O0 *.cpp -o debug", { noremap = true, silent = true })
 -- End of C++
