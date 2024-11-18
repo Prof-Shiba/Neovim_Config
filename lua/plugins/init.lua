@@ -19,6 +19,9 @@ return {
     config = true,
   },
 
+  { "nvzone/volt" , lazy = true },
+  { "nvzone/menu" , lazy = true },
+
   {
    "nvim-tree/nvim-tree.lua",
       opts = {
