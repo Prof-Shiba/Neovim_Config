@@ -5,9 +5,18 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- CTRL + T : Fancier Theme Switcher
 map("n", "<C-t>", function()
   require("nvchad.themes").open {border = true}
+end, {})
+-- Leader CD cd's into current dir folder
+map("n", "<leader>cd", ":cd %:h<CR>", { noremap = true, silent = true })
+
+-- mouse users + nvimtree users! (for volt menu)
+vim.keymap.set("n", "<RightMouse>", function()
+  vim.cmd.exec '"normal! \\<RightMouse>"'
+
+  local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, { mouse = true })
 end, {})
 
 -- C++ below
@@ -21,5 +30,5 @@ map("n", "<F6>", ":!./main<CR>", { noremap = true, silent = true })
 map("n", "<F7>", ":!g++ *.cpp -o main && ./main<CR>", { noremap = true, silent = true })
 
 -- F8 to compile with debug symbols
-map("n", "<F8>", ":!g++ -g -O0 *.cpp -o debug", { noremap = true, silent = true })
+map("n", "<F8>", ":!g++ -g -O0 *.cpp -o debug && echo 'Debug file created successfully!'<CR>", { noremap = true, silent = true })
 -- End of C++
