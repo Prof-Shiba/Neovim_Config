@@ -8,6 +8,7 @@ map("i", "jk", "<ESC>")
 map("n", "<C-t>", function()
   require("nvchad.themes").open {border = true}
 end, {})
+
 -- Leader CD cd's into current dir folder
 map("n", "<leader>cd", ":cd %:h<CR>", { noremap = true, silent = true })
 
