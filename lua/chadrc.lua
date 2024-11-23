@@ -32,7 +32,7 @@ M.ui = {
         local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
         local error_icon = "😡 - "
         local warning_icon = "⚡ - "
-        return string.format("%s%d %s%d", error_icon, errors, warning_icon, warnings)
+        return string.format("%s%d %s%d ", error_icon, errors, warning_icon, warnings)
       end
      }
   },
