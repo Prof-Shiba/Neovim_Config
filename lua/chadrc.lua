@@ -19,7 +19,7 @@ M.ui = {
     order = { "mode", "f", "l", "git", "%=",  "%=", "lsp_msg", "diagnostics", "lsp", "cwd",  "custom" },
      modules = {
        custom = function()
-         return "ꑭ ProfShibe"
+         return "ꑭProfShibe"
        end,
 
        f = function()
