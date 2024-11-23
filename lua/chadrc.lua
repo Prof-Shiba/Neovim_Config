@@ -14,8 +14,27 @@ M.base46 = {
 
 M.ui = {
   statusline = {
-    theme = "minimal",
-    separator_style = "round",
+    theme = "default", --|values| = default, vscode, vscode_colored, minimal
+    separator_style = "arrow", -- |values| = default, round, block, arrow
+    order = { "mode", "f", "l", "git", "%=",  "%=", "lsp_msg", "diagnostics", "lsp", "cwd",  "custom" },
+     modules = {
+       custom = function()
+         return "ꑭ ProfShibe"
+       end,
+
+       f = function()
+         return "%#St_file#" .. vim.fn.expand("%:t")
+       end,
+
+       l = " - %L lines",
+      diagnostics = function()
+        local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
+        local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
+        local error_icon = "😡 - "
+        local warning_icon = "⚡ - "
+        return string.format("%s%d %s%d", error_icon, errors, warning_icon, warnings)
+      end
+     }
   },
 }
 
