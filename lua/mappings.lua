@@ -20,6 +20,8 @@ vim.keymap.set("n", "<RightMouse>", function()
   require("menu").open(options, { mouse = true, border = true})
 end, {})
 
+
+
 -- C++ below
 -- F5 to compile all C++ files in the current directory
 map("n", "<F5>", ":!g++ *.cpp -o main && echo 'Compiled successfully!'<CR>", { noremap = true, silent = true })

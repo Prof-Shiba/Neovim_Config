@@ -21,6 +21,7 @@ return {
 
   { "nvzone/volt" , lazy = true },
   { "nvzone/menu" , lazy = true },
+  { "nvzone/showkeys", cmd = "ShowkeysToggle" },
 
   {
    "nvim-tree/nvim-tree.lua",
@@ -82,25 +83,41 @@ return {
   },
 
   {
-      "mfussenegger/nvim-dap-python",
-      ft = "python",
-      dependencies = {
-          "mfussenegger/nvim-dap",
-          "rcarriga/nvim-dap-ui",
-      },
-      config = function()
-          require("configs.dap-python")
-      end,
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = {
+        "mfussenegger/nvim-dap",
+        "rcarriga/nvim-dap-ui",
+    },
+    config = function()
+        require("configs.dap-python")
+    end,
   },
 
   {
-      "jay-babu/mason-nvim-dap.nvim",
-      event = "VeryLazy",
-      config = function()
-          require("configs.mason-dap")
-      end,
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    config = function()
+        require("configs.mason-dap")
+    end,
   },
 
+  {
+    "nvzone/showkeys",
+    opts = {
+      timeout = 3,
+      maxkeys = 4,
+      show_count = true,
+    }
+  },
+
+  {
+    "mfussenegger/nvim-lint",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("configs.lint")
+    end,
+  },
 
   {
   	"nvim-treesitter/nvim-treesitter",
