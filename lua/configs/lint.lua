@@ -2,7 +2,7 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
-  cpp = { "cpplint" },
+  -- cpp = { "cpplint" },
   python = { "flake8" },
   html = {"htmlhint"},
   css = {"stylelint"},

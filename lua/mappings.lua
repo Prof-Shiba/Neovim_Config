@@ -21,6 +21,8 @@ vim.keymap.set("n", "<RightMouse>", function()
 end, {})
 
 
+-- Run the current python file
+map("n", "<F4>", ":terminal python3 %<CR>", { noremap = true, silent = true})
 
 -- C++ below
 -- F5 to compile all C++ files in the current directory
