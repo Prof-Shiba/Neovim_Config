@@ -6,10 +6,10 @@
 local M = {}
 
 M.base46 = {
-	theme = "jellybeans",
-  transparency = false,
-  theme_toggle = {"jellybeans", "one_light"},
-  hl_override = require "configs.highlights".override, -- overrides the default white color
+	theme = "onedark",
+  transparency = true,
+  theme_toggle = {"onedark", "one_light"},
+  -- hl_override = require "configs.highlights".override, -- overrides the default white color
 }
 
 M.ui = {
