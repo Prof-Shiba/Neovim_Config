@@ -24,6 +24,22 @@ return {
   { "nvzone/showkeys", cmd = "ShowkeysToggle" },
 
   {
+    'vyfor/cord.nvim',
+    build = './build || .\\build',
+    event = 'VeryLazy',
+    opts = {
+      editor = {
+        tooltip = 'btw',
+      },
+      lsp = {
+        show_problem_count = true,
+        severity = 2,
+        scope = "buffer",
+      }
+    }, -- calls require('cord').setup()
+  },
+
+  {
    "nvim-tree/nvim-tree.lua",
       opts = {
         view = {
