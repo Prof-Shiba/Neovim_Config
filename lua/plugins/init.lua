@@ -35,7 +35,10 @@ return {
         show_problem_count = true,
         severity = 2,
         scope = "buffer",
-      }
+      },
+      idle = {
+        enable = false,
+      },
     }, -- calls require('cord').setup()
   },
 
