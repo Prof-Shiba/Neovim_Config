@@ -16,7 +16,13 @@ map("n", "<leader>cd", ":cd %:h<CR>", { noremap = true, silent = true })
 map("n", "G", "gg", {noremap = true, silent = true})
 map("n", "gg", "G", {noremap = true, silent = true})
 
--- mouse users + nvimtree users! (for volt menu)
+-- Keyboard shortcut for volt
+vim.keymap.set("n", "<C-a>", function()
+  local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, { mouse = false, border = true})
+end, {})
+
+-- Mouse shortcut for volt 
 vim.keymap.set("n", "<RightMouse>", function()
   vim.cmd.exec '"normal! \\<RightMouse>"'
 
