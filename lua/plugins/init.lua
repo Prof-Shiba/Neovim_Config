@@ -31,15 +31,18 @@ return {
       editor = {
         tooltip = 'btw',
       },
+
       lsp = {
         show_problem_count = true,
         severity = 2,
         scope = "buffer",
       },
+
       idle = {
         enable = false,
       },
-    }, -- calls require('cord').setup()
+
+    },
   },
 
   {
@@ -85,6 +88,7 @@ return {
         require("configs.dap")
     end,
   },
+
   -- Also needed for DAP ui
   {
     "nvim-neotest/nvim-nio",

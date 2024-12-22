@@ -12,6 +12,10 @@ end, {})
 -- Leader CD cd's into current dir folder
 map("n", "<leader>cd", ":cd %:h<CR>", { noremap = true, silent = true })
 
+-- Swap G and gg keys
+map("n", "G", "gg", {noremap = true, silent = true})
+map("n", "gg", "G", {noremap = true, silent = true})
+
 -- mouse users + nvimtree users! (for volt menu)
 vim.keymap.set("n", "<RightMouse>", function()
   vim.cmd.exec '"normal! \\<RightMouse>"'
