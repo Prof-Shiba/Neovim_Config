@@ -15,21 +15,18 @@ M.base46 = {
 M.ui = {
   statusline = {
     theme = "default", --|values| = default, vscode, vscode_colored, minimal
-    separator_style = "arrow", -- |values| = default, round, block, arrow
-    order = { "mode", "f", "l", "git", "%=", "lsp_msg", "diagnostics", "lsp", "cwd",  "custom" },
+    separator_style = "default", -- |values| = default, round, block, arrow
+    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "custom", "cursor", "l", },
      modules = {
        custom = function()
-         return "ꑭProfShibe"
+         return "ꑭProfShibe "
        end,
 
-       f = function()
-         return "%#St_file#" .. vim.fn.expand("%:t")
-       end,
-
-       l = " - %L lines",
+       l = "%L lines",
      }
   },
 }
+
 
 M.nvdash = {
     load_on_startup = true,
