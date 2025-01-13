@@ -6,9 +6,9 @@
 local M = {}
 
 M.base46 = {
-	theme = "bearded-arc",
-  transparency = true,
-  theme_toggle = {"bearded-arc", "one_light"},
+	theme = "catppuccin",
+  transparency = false,
+  theme_toggle = {"catppuccin", "one_light"},
   -- hl_override = require "configs.highlights".override, -- overrides the default white color
 }
 
