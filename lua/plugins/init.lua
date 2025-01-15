@@ -24,6 +24,13 @@ return {
   { "nvzone/showkeys", cmd = "ShowkeysToggle" },
 
   {
+    "nvzone/typr",
+    cmd = "TyprStats",
+    dependencies = "nvzone/volt",
+    opts = {},
+  },
+
+  {
     'vyfor/cord.nvim',
     build = './build || .\\build',
     event = 'VeryLazy',
