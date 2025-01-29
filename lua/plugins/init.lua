@@ -30,33 +30,11 @@ return {
     opts = {},
   },
 
-  -- {
-  --   'vyfor/cord.nvim',
-  --   branch = 'client-server',
-  --   build = ':Cord update',
-  --   opts = {}, -- calls require('cord').setup()
-  -- },
-
   {
     'vyfor/cord.nvim',
-    build = './build || .\\build',
-    event = 'VeryLazy',
-    opts = {
-      editor = {
-        tooltip = 'btw',
-      },
-
-      lsp = {
-        show_problem_count = true,
-        severity = 2,
-        scope = "buffer",
-      },
-
-      idle = {
-        enable = false,
-      },
-
-    },
+    branch = 'client-server',
+    build = ':Cord update',
+    opts = {}, -- calls require('cord').setup()
   },
 
   {
