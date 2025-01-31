@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- ts_ls is typescript + javascript 
-local servers = { "html", "cssls", "pyright", "lua_ls", "clangd", "ts_ls", "bashls", "neocmake"}
+local servers = { "html", "cssls", "pyright", "lua_ls", "clangd", "ts_ls", "bashls", }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config

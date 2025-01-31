@@ -6,9 +6,9 @@
 local M = {}
 
 M.base46 = {
-	theme = "gruvbox",
+	theme = "catppuccin",
   transparency = false,
-  theme_toggle = {"gruvbox", "one_light"},
+  theme_toggle = {"catppuccin", "one_light"},
   -- hl_override = require "configs.highlights".override, -- overrides the default white color
 }
 
