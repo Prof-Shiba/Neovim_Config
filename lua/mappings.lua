@@ -34,16 +34,17 @@ end, {})
 -- Run the current python file
 map("n", "<F4>", ":terminal python3 %<CR>", { noremap = true, silent = true})
 
--- C++ below
+-- C++ keybindings
 -- F5 to compile all C++ files in the current directory
-map("n", "<F5>", ":!g++ -Wall *.cpp -o main && echo 'Compiled successfully!'<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F5>', [[:terminal g++ -Wall *.cpp -o main && echo 'Compiled successfully!'<CR>]], {noremap = true, silent = true})
 
 -- F6 to run the compiled program
-map("n", "<F6>", ":!./main<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F6>', [[:terminal ./main<CR>]], {noremap = true, silent = true})
 
--- F7 to compile and run all C++ files
-map("n", "<F7>", ":!g++ -Wall *.cpp -o main && ./main<CR>", { noremap = true, silent = true })
+-- F7 to compile and run all C++ files (already working, included for completeness)
+vim.api.nvim_set_keymap('n', '<F7>', [[:terminal g++ -Wall *.cpp -o main && ./main<CR>]], {noremap = true, silent = true})
 
 -- F8 to compile with debug symbols
-map("n", "<F8>", ":!g++ -g -O0 *.cpp -o debug && echo 'Debug file created successfully!'<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F8>', [[:terminal g++ -g -O0 *.cpp -o debug && echo 'Debug file created successfully!'<CR>]], {noremap = true, silent = true})
+
 -- End of C++
