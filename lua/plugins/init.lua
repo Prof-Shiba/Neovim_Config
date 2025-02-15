@@ -24,13 +24,6 @@ return {
   { "nvzone/showkeys", cmd = "ShowkeysToggle" },
 
   {
-    "nvzone/typr",
-    cmd = "TyprStats",
-    dependencies = "nvzone/volt",
-    opts = {},
-  },
-
-  {
    "nvim-tree/nvim-tree.lua",
       opts = {
         view = {
@@ -38,12 +31,6 @@ return {
           width = 30,
         },
       }
-  },
-
-  {
-    'vyfor/cord.nvim',
-    build = ':Cord update',
-    -- opts = {}
   },
 
   {

@@ -6,9 +6,9 @@
 local M = {}
 
 M.base46 = {
-	theme = "tokyodark",
+	theme = "onenord",
   transparency = false,
-  theme_toggle = {"tokyodark", "one_light"},
+  theme_toggle = {"onenord", "one_light"},
   -- hl_override = require "configs.highlights".override, -- overrides the default white color
 }
 
