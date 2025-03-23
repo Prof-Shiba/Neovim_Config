@@ -30,9 +30,8 @@ map("n", "<RightMouse>", function()
   require("menu").open(options, { mouse = true, border = true})
 end, {})
 
-
 -- Run the current python file
-map("n", "<F4>", ":terminal python3 %<CR>", { noremap = true, silent = true})
+map('n', '<F4>', ":terminal python3 %<CR>", { noremap = true, silent = true})
 
 -- C++ keybindings
 -- F5 to compile all C++ files in the current directory
