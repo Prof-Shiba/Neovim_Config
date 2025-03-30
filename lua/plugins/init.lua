@@ -60,7 +60,8 @@ return {
       end,
 
       no_line_number = false,
-      theme = "OneHalfDark",
+      theme = "gruvbox-dark",
+      background_image = "/home/azov/Pictures/wallpapers/misty_forest.jpg",
       to_clipboard = true,
 
       language = function()
