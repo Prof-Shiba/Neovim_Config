@@ -6,10 +6,9 @@
 local M = {}
 
 M.base46 = {
-	theme = "onenord",
+	theme = "catppuccin",
   transparency = false,
-  theme_toggle = {"onenord", "one_light"},
-  -- hl_override = require "configs.highlights".override, -- overrides the default white color
+  theme_toggle = {"catppuccin", "one_light"},
 }
 
 M.ui = {
@@ -19,7 +18,7 @@ M.ui = {
     order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "custom", "cursor", "l", },
      modules = {
        custom = function()
-         return "ꑭProfShibe "
+         return "-> ProfShibe "
        end,
 
        l = "%L lines",
@@ -30,28 +29,6 @@ M.ui = {
 
 M.nvdash = {
     load_on_startup = true,
-    header = {
-      "####################",
-      "# ################ #",
-      "# ################ #",
-      "# ######    ###### #",
-      "# #####      ##### #",
-      "# ####  #  #  #### #",
-      "# ###  ##  ##  ### #",
-      "# #######  ####### #",
-      "# #######  ####### #",
-      "# ####        #### #",
-      "# #######  ####### #",
-      "# #######  ####### #",
-      "# #######  ####### #",
-      "# #######  ####### #",
-      "  #.-####  ####-.# ",
-      "  .# ######## #  ",
-          "  # #### # ",
-             " #  # ",
-    "                        ",
-    "                        ",
-    },
 }
 
 M.colorify = {
