@@ -6,26 +6,22 @@
 local M = {}
 
 M.base46 = {
-	theme = "catppuccin",
+	theme = "onedark",
   transparency = false,
-  theme_toggle = {"catppuccin", "one_light"},
+  theme_toggle = {"onedark", "one_light"},
 }
 
 M.ui = {
+  telescope = { style = bordered },
+
   statusline = {
-    theme = "default", --|values| = default, vscode, vscode_colored, minimal
-    separator_style = "arrow", -- |values| = default, round, block, arrow
-    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "custom", "cursor", "l", },
-     modules = {
-       custom = function()
-         return "-> ProfShibe "
-       end,
-
-       l = "%L lines",
-     }
+    theme = "minimal", --|values| = default, vscode, vscode_colored, minimal
+    separator_style = "round", -- |values| = default, round, block, arrow
+    -- order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor", "l"},
+    -- modules = { l = "%L lines", },
   },
-}
 
+}
 
 M.nvdash = {
     load_on_startup = true,
