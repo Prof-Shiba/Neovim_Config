@@ -6,13 +6,16 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "tundra",
   transparency = false,
-  theme_toggle = {"onedark", "one_light"},
+  theme_toggle = {"tundra", "one_light"},
 }
 
 M.ui = {
-  telescope = { style = bordered },
+  telescope = {
+    style = "bordered",
+    layout_strategy = "vertical"
+  },
 
   statusline = {
     theme = "minimal", --|values| = default, vscode, vscode_colored, minimal
