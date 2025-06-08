@@ -20,10 +20,12 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "c",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
+          "python",
+          "odin",
+          "cpp",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -37,12 +39,30 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "basedpyright",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
-      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      basedpyright = {
+        settings = {
+          basedpyright = {
+            analysis = {
+              typeCheckingMode = "off", -- Disable strict type checking
+              reportUnknownParameterType = false, -- Suppress "type of param is unknown"
+              reportUnknownVariableType = false,
+              reportUnknownArgumentType = false,
+              reportGeneralTypeIssues = false,
+              reportMissingTypeStubs = false,
+              reportOptionalMemberAccess = false,
+              reportOptionalSubscript = false,
+              reportOptionalCall = false,
+              reportPrivateUsage = false,
+              reportUnnecessaryTypeIgnoreComment = false,
+            },
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {

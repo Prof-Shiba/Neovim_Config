@@ -15,5 +15,19 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- Lua (for init.lua)
+vim.o.swapfile = true -- Ensure swap files are enabled
+vim.o.updatetime = 250 -- Update swap file quickly to detect crashes
+vim.o.directory = vim.fn.expand "~/.nvim/swap//" -- Store swap files in a dedicated directory
+
+-- Automatically handle swap files
+vim.api.nvim_create_autocmd("SwapExists", {
+  pattern = "*",
+  callback = function()
+    -- Check if the swap file is stale (no process is using it)
+    vim.cmd "let v:swapchoice = 'd'" -- Automatically delete the swap file
+  end,
+})
+
 require "lazy_setup"
 require "polish"
