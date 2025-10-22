@@ -61,7 +61,7 @@ return {
 
       no_line_number = false,
       theme = "gruvbox-dark",
-      background_image = "/home/azov/Pictures/wallpapers/misty_forest.jpg",
+      background_image = "/home/shibe/Pictures/Wallpapers/misty_forest.jpg",
       to_clipboard = true,
 
       language = function()
