@@ -19,6 +19,7 @@ end
 vim.o.swapfile = true -- Ensure swap files are enabled
 vim.o.updatetime = 250 -- Update swap file quickly to detect crashes
 vim.o.directory = vim.fn.expand "~/.nvim/swap//" -- Store swap files in a dedicated directory
+vim.opt.background = "dark"
 
 -- Automatically handle swap files
 vim.api.nvim_create_autocmd("SwapExists", {
