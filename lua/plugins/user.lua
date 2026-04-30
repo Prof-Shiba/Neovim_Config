@@ -14,6 +14,21 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
+  {
+    "iamharshdabas/hyde.nvim",
+    opts = {},
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    dependencies = { "hyde.nvim" },
+    config = function()
+      require("hyde").setup_tokyonight()
+    end,
+  },
+
   -- == Examples of Overriding Plugins ==
 
   -- customize dashboard options
