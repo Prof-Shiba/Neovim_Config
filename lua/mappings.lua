@@ -47,3 +47,8 @@ map('n', '<F7>', [[:terminal g++ -Wall *.cpp -o main && ./main<CR>]], {noremap =
 map('n', '<F8>', [[:terminal g++ -g -O0 *.cpp -o debug && echo 'Debug file created successfully!'<CR>]], {noremap = true, silent = true})
 
 -- End of C++
+
+-- TODO: Runs build.bat file maximum 3 dir up from current dir
+vim.keymap.set("n", "<C-b>", function()
+  vim.notify("Not implemented. Would run a build.bat file.", vim.log.levels.INFO)
+end, { desc = "NOT DONE. Run a build.bat file (up to 3 dirs up)." })
